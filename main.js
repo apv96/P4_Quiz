@@ -1,7 +1,9 @@
+const readline = require('readline');
 const {log, biglog, errorlog, colorize} = require("./out");
 const cmds = require("./cmds");
-const model = require('./model');
+
 const net = require("net");
+
 
 net.createServer(socket => {
   
@@ -11,7 +13,7 @@ net.createServer(socket => {
 biglog(socket, 'CORE Quiz', 'green');
 
 
-const readline = require('readline');
+
 const rl = readline.createInterface({
     input: socket,
     output: socket,
@@ -108,5 +110,5 @@ rl
 
 
 })
-.listen(3030)
+.listen(3030);
 
